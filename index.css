@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Syne', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-display);
+    background-color: #050505;
+    color: #f3f3f3;
+  }
+
+  code, pre {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a1111;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Character Glow & Aura Keyframes */
+@keyframes flame-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(220, 38, 38, 0.45)) drop-shadow(0 0 40px rgba(185, 28, 28, 0.25));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(239, 68, 68, 0.7)) drop-shadow(0 0 60px rgba(220, 38, 38, 0.4));
+    transform: scale(1.008);
+  }
+}
+
+@keyframes eyes-spark {
+  0%, 92%, 100% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 18px rgba(255, 255, 255, 0.8));
+  }
+  94% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 2px #ffffff);
+  }
+  96% {
+    opacity: 1;
+    filter: drop-shadow(0 0 14px #ffffff) drop-shadow(0 0 24px rgba(255, 255, 255, 0.9));
+  }
+}
+
+@keyframes glitch-horizontal {
+  0%, 96%, 100% {
+    transform: translate(0, 0);
+  }
+  97% {
+    transform: translate(-3px, 1px);
+  }
+  98% {
+    transform: translate(2px, -1px);
+  }
+}
+
+.animate-flame-aura {
+  animation: flame-pulse 4s ease-in-out infinite;
+}
+
+.animate-eyes-spark {
+  animation: eyes-spark 3.2s infinite;
+}
+
+.animate-glitch {
+  animation: glitch-horizontal 4s ease-in-out infinite;
+}
+
+/* Glass & Cyber Borders */
+.metal-panel {
+  background: linear-gradient(180deg, rgba(18, 14, 14, 0.85) 0%, rgba(10, 8, 8, 0.92) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.metal-panel-glow {
+  box-shadow: 0 0 20px -5px rgba(220, 38, 38, 0.3);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}

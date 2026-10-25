@@ -1,0 +1,8 @@
+{
+  "name": "Metal Ass — Personal AI",
+  "description": "Dark, intimidating, sarcastic, street-smart personal AI loyal friend who roasts bad decisions and delivers brutal honesty with heart.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
